@@ -10,14 +10,13 @@ import pickle
 import streamlit as st
 import os
 
-# loading the saved model
-current_directory = os.path.dirname(__file__)
+# Define the directory where the model file is stored in the repository
+model_directory = 'ML_project_nr'
 
-# File path relative to the current directory
-file_path = os.path.join(current_directory, 'trained_model.sav')
-
-# Load the model using the relative path
+# Load the model using the new file path
+file_path = os.path.join(model_directory, 'trained_model.sav')
 loaded_model = pickle.load(open(file_path, 'rb'))
+
 
 def diabetes_prediction(input_data):
     input_data_as_numpy_array = np.asarray(input_data)
