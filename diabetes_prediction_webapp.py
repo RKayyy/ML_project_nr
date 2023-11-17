@@ -13,8 +13,8 @@ import os
 
 
 # Load the model using the new file path
-file_path = 'ML_project_nr/trained_model.sav'
-loaded_model = pickle.load(open(file_path, 'rb'))
+
+loaded_model = pickle.load(open('/trained_model.sav', 'rb'))
 
 
 def diabetes_prediction(input_data):
