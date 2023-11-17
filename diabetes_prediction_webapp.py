@@ -10,11 +10,10 @@ import pickle
 import streamlit as st
 import os
 
-# Define the directory where the model file is stored in the repository
-model_directory = 'ML_project_nr'
+
 
 # Load the model using the new file path
-file_path = os.path.join(model_directory, 'trained_model.sav')
+file_path = 'ML_project_nr/trained_model.sav'
 loaded_model = pickle.load(open(file_path, 'rb'))
 
 
